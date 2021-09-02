@@ -1,0 +1,4 @@
+name: pff2-fb-conversion-api
+version: "0.1"
+desc: Facebook conversion API events caller
+class: Pff2FbConversionApi

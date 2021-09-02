@@ -1,0 +1,11 @@
+moduleConf:
+  apiVersion: v11.0
+  #facebook pixel Id
+  pixelId:
+  accessToken:
+  #for testing purpose. Possible values are: payload, request, false (debug disabled).
+  #If payload every event doesn't send the request but print the payload on the screen
+  #If request adds to payload the test code for testing server events, sends the payload via conversion API
+  debug: false
+  #test code to Test Server Events, used only if debug is not false
+  testCode:

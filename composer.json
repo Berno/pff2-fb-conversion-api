@@ -1,0 +1,28 @@
+{
+	"name": "berno/pff2-fb-conversion-api",
+	"type": "pff2-module",
+	"description": "Module to manage facebook conversion api",
+	"license": "MIT",
+	"keywords": [
+		"pff2", "module", "facebook", "conversion api"
+	],
+	"authors": [
+		{
+			"name": "Marco Bernini",
+			"email": "marco.bernini@neropaco.net",
+			"role": "developer"
+		}
+	],
+	"homepage": "https://github.com/berno/pff2-fb-conversion-api",
+	"require": {
+		"stonedz/pff2-installers": "1.2.0"
+	},
+  	"require-dev": {
+        "stonedz/pff2": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "pff\\modules\\": "src/"
+        }
+    }
+}
