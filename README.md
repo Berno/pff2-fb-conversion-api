@@ -21,7 +21,7 @@ The basic request sent to the facebook api:
    "test_event_code": ""
 }
 ```
-* `event_name` is based on the event called and set by the method called.
+* `event_name` is based on the event and set by the specific method called.
 * `event_time` is set with the current timestamp value
 * `event_source_url` is set with the $event_source_url parameter, if it is not specified is replaced with the current request url by default. 
 * `client_ip_address` is set with the `$_SERVER['REMOTE_ADDR']` value
@@ -46,7 +46,9 @@ public function pageViewTrigger() {
 ``` 
 Insert a render action in the main layout which refers to the action created (for ex. in the Layout_Controller)
 
-`<?php $this->renderAction('Layout', 'pageViewTrigger', array())?>`
+```php
+<?php $this->renderAction('Layout', 'pageViewTrigger', array())?>
+```
 
 This method does not create a custom data request field.
 
