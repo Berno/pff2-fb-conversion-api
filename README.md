@@ -15,27 +15,25 @@ The basic request sent to the facebook api:
             "client_ip_address": "",
             "client_user_agent": ""
          },
-         "custom_data": {
-            ...
-         }
+         "custom_data": {}
       }
    ],
    "test_event_code": ""
 }
 ```
-* event_name is based on the event called and set by the method called.
-* event_time is set with the current timestamp value
-* event_source_url is set with the $event_source_url parameter, if it is not specified is replaced with the current request url by default. 
-* client_ip_address is set with the `$_SERVER['REMOTE_ADDR']` value
-* client_user_agent is set with the `$_SERVER['HTTP_USER_AGENT']` value
-* custom_data depends on the specific event sent, see the event specific documentation.
-* test_event_code is present only if the debug config param is not false
+* `event_name` is based on the event called and set by the method called.
+* `event_time` is set with the current timestamp value
+* `event_source_url` is set with the $event_source_url parameter, if it is not specified is replaced with the current request url by default. 
+* `client_ip_address` is set with the `$_SERVER['REMOTE_ADDR']` value
+* `client_user_agent` is set with the `$_SERVER['HTTP_USER_AGENT']` value
+* `custom_data` depends on the specific event sent, see the event specific documentation.
+* `test_event_code` is present only if the debug config param is not false
 
 ## Events
 
 The facebook pixel events managed by the module are:
  
-#### PageView
+### PageView
 
 To send a PageView event create an action in a controller in which you call `sendPageViewEvent()`:
 ```php 
@@ -52,7 +50,7 @@ Insert a render action in the main layout which refers to the action created (fo
 
 This method does not create a custom data request field.
 
-#### CompleteRegistration
+### CompleteRegistration
 `sendCompleteRegistrationEvent($event_source_url, $user_email, $status)`
 * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
 If `null` the parameter value is replaced with the absolute url of the request.
@@ -66,7 +64,7 @@ example of custom data created:
     "status": "registered"
 }
 ```
-#### InitiateCheckout
+### InitiateCheckout
 
 `sendInitiateCheckoutEvent($event_source_url, $user_email, $value, $currency = "EUR")`
  * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain. If `null` the parameter value is replaced with the absolute url of the request.
@@ -83,7 +81,7 @@ example of custom data created:
 }
 ```
 
-#### ViewContent
+### ViewContent
 
 `sendViewContentEvent($event_source_url, $user_email, $content_name, $content_ids, $value, $currency = "EUR")`
 
@@ -106,7 +104,7 @@ example of custom data created:
 }
 ```
 
-#### AddToCart
+### AddToCart
 
 `sendAddToCartEvent($event_source_url, $user_email, $contents, $value, $currency = "EUR")`
 
@@ -129,7 +127,7 @@ example of custom data created:
 }
 ```
 
-#### Purchase
+### Purchase
 
 `sendPurchaseEvent($event_source_url, $user_email, $content_ids, $order_value, $currency = "EUR")`
 
