@@ -15,10 +15,10 @@
 	],
 	"homepage": "https://github.com/berno/pff2-fb-conversion-api",
 	"require": {
-		"stonedz/pff2-installers": "1.2.0"
+		"stonedz/pff2-installers": "~3"
 	},
   	"require-dev": {
-        "stonedz/pff2": "2.*"
+        "stonedz/pff2": "3.0.x-dev"
     },
     "autoload": {
         "psr-4": {
