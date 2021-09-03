@@ -76,7 +76,7 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
     }
 
     /**
-     * @param string $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
+     * @param string|null $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
      * @param string|null $user_email User email if logged.
      * @param [string] $content_ids The content IDs associated with the event in the form ['ABC','123']
      * @param float $order_value Total order amount
@@ -101,7 +101,7 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
     }
 
     /**
-     * @param string $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
+     * @param string|null $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
      * @param string|null $user_email User email if logged.
      * @param string $status The status of the registration event, as a string. Example: 'registered'.
      */
@@ -119,7 +119,7 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
     }
 
     /**
-     * @param string $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
+     * @param string|null $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
      * @param string|null $user_email User email if logged.
      * @param float $value The total of order when the checkout process begins
      * @param string $currency The currency for the $value specified. Currency must be a valid ISO 4217 three digit currency code. Example: 'EUR'.
@@ -139,9 +139,9 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
     }
 
     /**
-     * @param string $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
+     * @param string|null $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
      * @param string|null $user_email User email if logged.
-     * @param string content_name The name of the page or product associated with the event.
+     * @param string $content_name The name of the page or product associated with the event.
      * @param [string] $content_ids The content IDs associated with the event in the form ['ABC','123']
      * @param float $value A numeric value associated with this event.
      * @param string $currency The currency for the $value specified. Currency must be a valid ISO 4217 three digit currency code. Example: 'EUR'.
@@ -166,7 +166,7 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
     }
 
     /**
-     * @param string $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
+     * @param string|null $event_source_url The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
      * @param string|null $user_email User email if logged.
      * @param [array] $contents, array of associative arrays [array("id" => <product_id>, "quantity" => <product_qnt>)]
      * @param float $value Total cost of the item added (price * quantity).
