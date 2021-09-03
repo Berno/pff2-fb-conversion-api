@@ -130,8 +130,8 @@ example of custom data created:
     "value": 100.2,
     "currency": "EUR",
     "contents": [
-       {id: "123", quantity: 1},
-       {id: "234", quantity: 3}
+       {"id": "123", "quantity": 1},
+       {"id": "234", "quantity": 3}
     ],
     "content_type": "product"
 }
