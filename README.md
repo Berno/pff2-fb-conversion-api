@@ -53,7 +53,9 @@ Insert a render action in the main layout which refers to the action created (fo
 This method does not create a custom data request field.
 
 ### CompleteRegistration
-`sendCompleteRegistrationEvent($event_source_url, $user_email, $status)`
+```php
+sendCompleteRegistrationEvent($event_source_url, $user_email, $status)
+```
 * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain.
 If `null` the parameter value is replaced with the absolute url of the request.
 * `string|null $user_email` User email, if specified it has added to the `user_data` request field.
@@ -68,7 +70,9 @@ example of custom data created:
 ```
 ### InitiateCheckout
 
-`sendInitiateCheckoutEvent($event_source_url, $user_email, $value, $currency = "EUR")`
+```php
+sendInitiateCheckoutEvent($event_source_url, $user_email, $value, $currency = "EUR")
+```
  * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain. If `null` the parameter value is replaced with the absolute url of the request.
  * `string|null` User email, if specified it has added to the `user_data` request field.
  * `float $value` The total of order when the checkout process begins
@@ -85,7 +89,9 @@ example of custom data created:
 
 ### ViewContent
 
-`sendViewContentEvent($event_source_url, $user_email, $content_name, $content_ids, $value, $currency = "EUR")`
+```php
+sendViewContentEvent($event_source_url, $user_email, $content_name, $content_ids, $value, $currency = "EUR")
+```
 
  * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain. If `null` the parameter value is replaced with the absolute url of the request.
  * `string|null` User email, if specified it has added to the `user_data` request field.
@@ -108,7 +114,9 @@ example of custom data created:
 
 ### AddToCart
 
-`sendAddToCartEvent($event_source_url, $user_email, $contents, $value, $currency = "EUR")`
+```php
+sendAddToCartEvent($event_source_url, $user_email, $contents, $value, $currency = "EUR")
+```
 
 * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain. If `null` the parameter value is replaced with the absolute url of the request.
 * `string|null` User email, if specified it has added to the `user_data` request field.
@@ -131,7 +139,9 @@ example of custom data created:
 
 ### Purchase
 
-`sendPurchaseEvent($event_source_url, $user_email, $content_ids, $order_value, $currency = "EUR")`
+```php
+sendPurchaseEvent($event_source_url, $user_email, $content_ids, $order_value, $currency = "EUR")
+```
 
 * `string|null $event_source_url` The browser URL where the event happened. The URL must begin with http:// or https:// and should match the verified domain. If `null` the parameter value is replaced with the absolute url of the request.
 * `string|null` User email, if specified it has added to the `user_data` request field.
