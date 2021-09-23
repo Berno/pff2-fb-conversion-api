@@ -1,6 +1,6 @@
 # Pff2 Facebook conversion Api
 
-## Request common parameter
+## Request common parameters
 
 The basic request sent to the facebook api:
 ```json
@@ -13,7 +13,9 @@ The basic request sent to the facebook api:
          "action_source": "website",
          "user_data": {
             "client_ip_address": "",
-            "client_user_agent": ""
+            "client_user_agent": "",
+            "fbp": "",
+            "fbc": ""
          },
          "custom_data": {}
       }
@@ -26,6 +28,8 @@ The basic request sent to the facebook api:
 * `event_source_url` is set with the $event_source_url parameter, if it is not specified is replaced with the current request url by default. 
 * `client_ip_address` is set with the `$_SERVER['REMOTE_ADDR']` value
 * `client_user_agent` is set with the `$_SERVER['HTTP_USER_AGENT']` value
+* `fbp` is set with the `$_COOKIE['_fbp']` cookie value if it's present
+* `fbc` is set with the `$_COOKIE['_fbc']` cookie value if it's present
 * `custom_data` depends on the specific event sent, see the event specific documentation.
 * `test_event_code` is present only if the debug config param is not false
 
