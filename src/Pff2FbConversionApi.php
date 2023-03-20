@@ -202,7 +202,7 @@ class Pff2FbConversionApi extends AModule implements IConfigurableModule {
             "action_source" => "website"
         );
         $user_data = array(
-            "client_user_agent" => $_SERVER['HTTP_USER_AGENT'],
+            "client_user_agent" => !empty($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '',
             "client_ip_address" => $_SERVER['REMOTE_ADDR']
         );
         if (!empty($_COOKIE['_fbp'])) {
